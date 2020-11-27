@@ -48,22 +48,23 @@ calc(20, 10, 'sub'); // 10
 calc(20, 10, 'mul'); // 200
 */
 function calc(numA, numB, operation){
-  switch(operation){
-    case 'add':
-      return `sum of ${numA} and ${numB} is ${numA + numB}`;
-      break;
-    case 'sub':
-      return `subtraction of ${numA} and ${numB} is ${numA - numB}`;
-      break;
-    case 'mul':
-      return `multification of ${numA} and ${numB} is ${numA * numB}`;
-      break;
-    case 'div':
-      return `division of ${numA} and ${numB} is ${numA / numB}`;
-      break;
-    default:
-      alert(`Enter valid number`)
+  if(numA===Number(numA) && numB===Number(numB)){
+    switch(operation){
+      case 'add':
+        return `sum of ${numA} and ${numB} is ${numA + numB}`;
+      case 'sub':
+        return `subtraction of ${numA} and ${numB} is ${numA - numB}`;
+      case 'mul':
+        return `multification of ${numA} and ${numB} is ${numA * numB}`;
+      case 'div':
+        return `division of ${numA} and ${numB} is ${numA / numB}`;
+      default:
+        alert(`Enter valid opretion`);
+    }
+  }else{
+    return alert(`Enter valid Input`);
   }
+ 
 }
 calc(10, 20, 'add'); 
 calc(20, 10, 'sub'); 
