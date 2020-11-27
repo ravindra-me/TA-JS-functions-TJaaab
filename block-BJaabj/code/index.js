@@ -56,7 +56,7 @@ addTwoNumbers();
 function getTable(){
   let num = +prompt(`Enter a number`);
   for(let i = 1; i<=10 ;i++){
-    console.log(num*i);
+    console.log(`${num} * ${i} = ${num * i}`);
   }
 }
 getTable();
@@ -68,7 +68,9 @@ getTable();
 */
 function isLeapYear(){
   let year = +prompt(`Enter a year`);
-  year%4===0 ? alert(`${year} is a leap year`) : alert(`${year} is not a year`);
+  year%400===0 ? alert(`${year} is a leap year`) : 
+  year%100===0 ? alert(`${year} is not a year`) :
+  year%4===0   ? alert(`${year} is a leap year`) : alert(`${year} is not a leap year`);
 }
 isLeapYear();
 /*
