@@ -55,15 +55,7 @@ Obese: BMI is 30 or more
 
 function calculateBMI(weight, height) {
   let bmi = weight / (height * height);
-  if(bmi < 18.5) {
-    return `Underweight`;
-  }else if(bmi > 18.5 && bmi < 24.9) {
-    return `Normal weight`;
-  }else if(bmi>25 && bmi < 29.9) {
-    return `Overweight`
-  }else{
-    return `Obese`;
-  }
+  return (bmi < 18.5) ? `Underweight` : (bmi > 18.5 && bmi < 24.9) ? `Normal weight` : (bmi>25 && bmi < 29.9) ? `Overweight` : bmi > 30 ? `Obese` : `please enter values`;
 }
 
 /* 3. appropiateDrinks
@@ -93,11 +85,7 @@ Twist is when user passes anything other than number, or string value you should
 */
 
 function sum(a, b) {
-  if(typeof a === typeof b){
-    return a + b;
-  }else{
-    return `Enter valid Values`;
-  }
+  return (typeof a === "number" && typeof b === "number") ?  a + b : (typeof a === "string" && typeof b === "string") ? `${a} ${b}` : `Enter valid Values`;
 }
 
 // Function Test
